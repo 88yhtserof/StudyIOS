@@ -113,15 +113,25 @@
                                 <rect key="frame" x="64" y="754" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="확대"/>
+                                <connections>
+                                    <action selector="btnResizeImage:" destination="vJI-XP-vCm" eventType="touchUpInside" id="O0P-Ut-Kur"/>
+                                </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dlx-Zv-Oal">
                                 <rect key="frame" x="263" y="754" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="switchImageOnOff:" destination="vJI-XP-vCm" eventType="valueChanged" id="fsY-E3-GYd"/>
+                                </connections>
                             </switch>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="M0e-Yf-blS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="btnResize" destination="S65-1Q-a3F" id="ubL-uN-S5c"/>
+                        <outlet property="imgView" destination="eXX-LW-Aqu" id="2GP-uj-cI9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ifP-i9-iPJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
