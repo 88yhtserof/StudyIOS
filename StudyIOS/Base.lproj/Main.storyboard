@@ -211,6 +211,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="타이머" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UhS-SH-lOj">
+                                <rect key="frame" x="174" y="227" width="45" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qW3-hT-yM9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -218,6 +225,7 @@
                     <connections>
                         <outlet property="lblCurrentTime" destination="WxM-ae-tKy" id="rfJ-iY-xXK"/>
                         <outlet property="lblPickerTime" destination="4bx-Wv-RVo" id="uAN-Bj-sio"/>
+                        <outlet property="lblTimer" destination="UhS-SH-lOj" id="8eo-jJ-cie"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l9G-Jl-pV2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
