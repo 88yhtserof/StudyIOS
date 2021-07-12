@@ -23,6 +23,7 @@ class DatePickerViewController: UIViewController {
         
         Timer.scheduledTimer(timeInterval: interval, target: self, selector: timeSelector, userInfo: nil, repeats: true)
         //target : 동작될 View, selector: 타이머가 구동될 때 실행할 함수
+        //현재시간에 타이머를 설정해 놓았기 때문에 interval마다 selector로 설정해 놓은 함수가 호출된다, 즉 1초마다 현재시간이 갱신된다.
     }
     
     //데이터피커 액션함수는 데이터 피커를 선택했을때 실행된다.
@@ -35,10 +36,15 @@ class DatePickerViewController: UIViewController {
             "선택시간: " + formatter.string(from: dataPickerView.date)
     }
     
+    //타이머가 구동된 후 정해진 시간이 되었을 때 실행할 함수
     @objc func updateTime(){
         lblTimer.text = String(count)
         count+=1
         
+        let date = NSDate() //현재 시간을 NSDate 함수를 사용해 가져오기
         
+        let formatter = DateFormatter() //날짜를 출력하기 위해 DateFormatter 클래스의 상수 formatter 선언
+        formatter.dateFormat = "yyyy-MM-dd a hh:mm:ss EEEE" //날짜 출력 형식 지정
+        lblCurrentTime.text = "현재시간: "+formatter.string(from: date as Date)
     }
 }
