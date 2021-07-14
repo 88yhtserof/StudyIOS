@@ -26,7 +26,6 @@ class MissionDatePickerViewController: UIViewController {
         
         //현재 시간이 매 interval마다 갱신되도록 타이머 설정
         Timer.scheduledTimer(timeInterval: interval, target: self, selector: timeSelector, userInfo: nil, repeats: true)
-        
     }
     
     //DatePicker 선택 시 호출되는 함수
@@ -53,10 +52,12 @@ class MissionDatePickerViewController: UIViewController {
         lblCurrentTime.text = fomatterDate.string(from: currentDate as Date)
         currentTime = formatterTime.string(from: currentDate as Date)
         
+        //현재 시간이 매 interval 갱신될 때마다 알람될 시간과 비교해야 하기 때문에 ,updateTime에서 compareTime 메소드 호출
         compareTime()
     }
     //#selector()의 인자로 사용될 메소드를 선언할 때 Object-C와의 호환성을 위하여 함수 앞에 @objc 키워드 필수
     
+    //현재 시간과 알람 시간을 비교하는 함수
     func compareTime(){
         var backgroundColor: UIColor
         
