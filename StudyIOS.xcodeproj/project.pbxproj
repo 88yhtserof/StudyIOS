@@ -10,6 +10,7 @@
 		9A06954C2696D3F3009F553F /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A06954B2696D3F3009F553F /* ImageViewController.swift */; };
 		9A0695512696EBBA009F553F /* imgOn.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9A06954F2696EBBA009F553F /* imgOn.jpg */; };
 		9A0695522696EBBA009F553F /* imgOff.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9A0695502696EBBA009F553F /* imgOff.jpg */; };
+		9A2C9649269E8A5E007739CA /* MissionDatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2C9648269E8A5E007739CA /* MissionDatePickerViewController.swift */; };
 		9A537C26269BFACD0068C96A /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A537C25269BFACD0068C96A /* DatePickerViewController.swift */; };
 		9A6E0B6E2699B61D009DF73A /* WallaceAndGromit_playingMusic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9A6E0B692699B61D009DF73A /* WallaceAndGromit_playingMusic.jpg */; };
 		9A6E0B6F2699B61D009DF73A /* WallaceAndGromit_face.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A6E0B6A2699B61D009DF73A /* WallaceAndGromit_face.png */; };
@@ -46,6 +47,7 @@
 		9A06954B2696D3F3009F553F /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		9A06954F2696EBBA009F553F /* imgOn.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = imgOn.jpg; sourceTree = "<group>"; };
 		9A0695502696EBBA009F553F /* imgOff.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = imgOff.jpg; sourceTree = "<group>"; };
+		9A2C9648269E8A5E007739CA /* MissionDatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionDatePickerViewController.swift; sourceTree = "<group>"; };
 		9A537C25269BFACD0068C96A /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 		9A6E0B692699B61D009DF73A /* WallaceAndGromit_playingMusic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WallaceAndGromit_playingMusic.jpg; sourceTree = "<group>"; };
 		9A6E0B6A2699B61D009DF73A /* WallaceAndGromit_face.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WallaceAndGromit_face.png; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				9AA2FEEA268C61A300E2E9C7 /* Info.plist */,
 				9A06954B2696D3F3009F553F /* ImageViewController.swift */,
 				9A537C25269BFACD0068C96A /* DatePickerViewController.swift */,
+				9A2C9648269E8A5E007739CA /* MissionDatePickerViewController.swift */,
 			);
 			path = StudyIOS;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A2C9649269E8A5E007739CA /* MissionDatePickerViewController.swift in Sources */,
 				9AA2FEE1268C61A200E2E9C7 /* ViewController.swift in Sources */,
 				9AA2FEDD268C61A200E2E9C7 /* AppDelegate.swift in Sources */,
 				9A537C26269BFACD0068C96A /* DatePickerViewController.swift in Sources */,
