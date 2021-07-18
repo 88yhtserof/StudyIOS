@@ -289,17 +289,20 @@
             </objects>
             <point key="canvasLocation" x="-46.153846153846153" y="-2642.4170616113743"/>
         </scene>
-        <!--View Controller-->
+        <!--Picker View Controller-->
         <scene sceneID="HRd-l4-0h0">
             <objects>
-                <viewController id="BDK-TL-38t" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="2Sb-Fw-uxh" customClass="PickerViewController">
+                <viewController id="BDK-TL-38t" customClass="PickerViewController" customModule="StudyIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Sb-Fw-uxh">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dZw-gP-McX">
                                 <rect key="frame" x="0.0" y="145" width="390" height="162"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BDK-TL-38t" id="ADo-lX-LlO"/>
+                                </connections>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Selected Item: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZoG-LG-MUz">
                                 <rect key="frame" x="16" y="360" width="143" height="40"/>
@@ -323,6 +326,11 @@
                         <viewLayoutGuide key="safeArea" id="8pN-ei-POg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="2qh-wl-ULH" id="rjE-Va-8ky"/>
+                        <outlet property="lblImageFileName" destination="aVc-da-aPn" id="sex-ep-7GK"/>
+                        <outlet property="pickerImage" destination="dZw-gP-McX" id="eHs-YM-kyZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OOC-hc-nZx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
