@@ -16,6 +16,7 @@
 		9A6E0B6F2699B61D009DF73A /* WallaceAndGromit_face.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A6E0B6A2699B61D009DF73A /* WallaceAndGromit_face.png */; };
 		9A6E0B712699B61D009DF73A /* WallaceAndGromit_putArmsAround.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9A6E0B6C2699B61D009DF73A /* WallaceAndGromit_putArmsAround.jpg */; };
 		9A6E0B752699B763009DF73A /* MissionImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6E0B742699B763009DF73A /* MissionImageViewController.swift */; };
+		9A7CD86226A46CC800AA7748 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7CD86126A46CC800AA7748 /* PickerViewController.swift */; };
 		9AA2FEDD268C61A200E2E9C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA2FEDC268C61A200E2E9C7 /* AppDelegate.swift */; };
 		9AA2FEDF268C61A200E2E9C7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA2FEDE268C61A200E2E9C7 /* SceneDelegate.swift */; };
 		9AA2FEE1268C61A200E2E9C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA2FEE0268C61A200E2E9C7 /* ViewController.swift */; };
@@ -53,6 +54,7 @@
 		9A6E0B6A2699B61D009DF73A /* WallaceAndGromit_face.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WallaceAndGromit_face.png; sourceTree = "<group>"; };
 		9A6E0B6C2699B61D009DF73A /* WallaceAndGromit_putArmsAround.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WallaceAndGromit_putArmsAround.jpg; sourceTree = "<group>"; };
 		9A6E0B742699B763009DF73A /* MissionImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissionImageViewController.swift; sourceTree = "<group>"; };
+		9A7CD86126A46CC800AA7748 /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		9AA2FED9268C61A200E2E9C7 /* StudyIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AA2FEDC268C61A200E2E9C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AA2FEDE268C61A200E2E9C7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +96,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A7CD86326A46D0800AA7748 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				9A06954F2696EBBA009F553F /* imgOn.jpg */,
+				9A0695502696EBBA009F553F /* imgOff.jpg */,
+				9A6E0B6C2699B61D009DF73A /* WallaceAndGromit_putArmsAround.jpg */,
+				9A6E0B692699B61D009DF73A /* WallaceAndGromit_playingMusic.jpg */,
+				9A6E0B6A2699B61D009DF73A /* WallaceAndGromit_face.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		9AA2FED0268C61A100E2E9C7 = {
 			isa = PBXGroup;
 			children = (
@@ -117,12 +131,8 @@
 		9AA2FEDB268C61A200E2E9C7 /* StudyIOS */ = {
 			isa = PBXGroup;
 			children = (
+				9A7CD86326A46D0800AA7748 /* images */,
 				9A6E0B742699B763009DF73A /* MissionImageViewController.swift */,
-				9A6E0B6A2699B61D009DF73A /* WallaceAndGromit_face.png */,
-				9A6E0B692699B61D009DF73A /* WallaceAndGromit_playingMusic.jpg */,
-				9A6E0B6C2699B61D009DF73A /* WallaceAndGromit_putArmsAround.jpg */,
-				9A0695502696EBBA009F553F /* imgOff.jpg */,
-				9A06954F2696EBBA009F553F /* imgOn.jpg */,
 				9AA2FEDC268C61A200E2E9C7 /* AppDelegate.swift */,
 				9AA2FEDE268C61A200E2E9C7 /* SceneDelegate.swift */,
 				9AA2FEE0268C61A200E2E9C7 /* ViewController.swift */,
@@ -133,6 +143,7 @@
 				9A06954B2696D3F3009F553F /* ImageViewController.swift */,
 				9A537C25269BFACD0068C96A /* DatePickerViewController.swift */,
 				9A2C9648269E8A5E007739CA /* MissionDatePickerViewController.swift */,
+				9A7CD86126A46CC800AA7748 /* PickerViewController.swift */,
 			);
 			path = StudyIOS;
 			sourceTree = "<group>";
@@ -292,6 +303,7 @@
 			files = (
 				9A2C9649269E8A5E007739CA /* MissionDatePickerViewController.swift in Sources */,
 				9AA2FEE1268C61A200E2E9C7 /* ViewController.swift in Sources */,
+				9A7CD86226A46CC800AA7748 /* PickerViewController.swift in Sources */,
 				9AA2FEDD268C61A200E2E9C7 /* AppDelegate.swift in Sources */,
 				9A537C26269BFACD0068C96A /* DatePickerViewController.swift in Sources */,
 				9A06954C2696D3F3009F553F /* ImageViewController.swift in Sources */,
