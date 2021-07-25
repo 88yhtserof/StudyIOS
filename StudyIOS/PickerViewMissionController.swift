@@ -11,7 +11,9 @@
 
 import UIKit
 
-class PickerViewMissionController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
+class PickerViewMissionController: UIViewController,
+                                   UIPickerViewDelegate,
+                                   UIPickerViewDataSource {
     let MAX_ARRAY_NUM = 3
     let PICKER_VIEW_COLUMN = 2 //피커 뷰 component 2개 필요
     let PICKER_VIEW_HEIGHT:CGFloat = 100
@@ -60,7 +62,7 @@ class PickerViewMissionController: UIViewController,UIPickerViewDelegate,UIPicke
         return imageFileName.count
     }
     
-    //사용자가 피커 뷰의 행을 선택했을 때 할 일을 델리게이트에게 지시하는 메서든
+    //사용자가 피커 뷰의 행을 선택했을 때 할 일을 델리게이트에게 지시하는 메서드
     //didSelectRow 인수가 있는 메서드
     func pickerView(_ pickerView: UIPickerView,
                     didSelectRow row: Int, inComponent component: Int) {
