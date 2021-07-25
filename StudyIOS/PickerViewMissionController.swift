@@ -13,6 +13,7 @@ import UIKit
 class PickerViewMissionController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
     let MAX_ARRAY_NUM = 3
     let PICKER_VIEW_COLUMN = 2 //피커 뷰 component 2개 필요
+    var imageArray: Array<UIImage?> = [UIImage?]()
     var imageFileName = ["putArmsAround.jpg",
                          "playingMusic.jpg",
                          "face.png"]
@@ -25,7 +26,15 @@ class PickerViewMissionController: UIViewController,UIPickerViewDelegate,UIPicke
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //UIImage 타입의 imageArray에 요소 추가
+        for i in 0 ..< MAX_ARRAY_NUM {
+            let image = UIImage(named: "WallaceAndGromit_\(imageFileName[i])")
+            imageArray.append(image)
+        }
         
+        //초기 화면 설정
+        lblImageFileName.text = imageFileName[0]
+        imageView.image = imageArray[0]
     }
     
     //returns the number of components(columns) to display
@@ -40,6 +49,19 @@ class PickerViewMissionController: UIViewController,UIPickerViewDelegate,UIPicke
     //component는 인데스 0부터 시작한다. 인수인 component를 사용해 component를 구분할 수 있다.
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return imageFileName.count
+    }
+    
+    //사용자가 피커 뷰의 행을 선택했을 때 할 일을 델리게이트에게 지시하는 메서든
+    //didSelectRow 인수가 있는 메서드
+    func pickerView(_ pickerView: UIPickerView,
+                    didSelectRow row: Int, inComponent component: Int) {
+        //왼쪽 컴포넌트를 선택했을 때 파일 명 출력, 오른쪽 컴포넌트 선택했을 때 파일 명 출력
+        if component == 0 {
+            lblImageFileName.text  = imageFileName[row]
+        }
+        else{
+            imageView.image = imageArray[row]
+        }
     }
     
     //titleForRow 인수가 있는 델리게이트 메서드를 쓰면 component에 글자가 뜨게 할 수 있다.
