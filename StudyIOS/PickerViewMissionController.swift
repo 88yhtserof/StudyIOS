@@ -13,6 +13,7 @@ import UIKit
 class PickerViewMissionController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
     let MAX_ARRAY_NUM = 3
     let PICKER_VIEW_COLUMN = 2 //피커 뷰 component 2개 필요
+    let PICKER_VIEW_HEIGHT:CGFloat = 100
     var imageArray: Array<UIImage?> = [UIImage?]()
     var imageFileName = ["putArmsAround.jpg",
                          "playingMusic.jpg",
@@ -43,6 +44,13 @@ class PickerViewMissionController: UIViewController,UIPickerViewDelegate,UIPicke
         return PICKER_VIEW_COLUMN
     }
     
+    //returns height of row for each component.
+    //component 행의 높이를 정할 수 있다.
+    //rowHeightForComponent 인수를 가지는 메서드
+    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component:Int) -> CGFloat {
+        return PICKER_VIEW_HEIGHT
+    }
+    
     //Returns The number of rows for the component.
     //numberOfRowsInComponent인수를 가진 델리게이트 메서드
     //한 component의 행의 개수를 반환한다
@@ -68,6 +76,9 @@ class PickerViewMissionController: UIViewController,UIPickerViewDelegate,UIPicke
     
     //viewForRow 인수가 있는 델리게이트 메서드는 component에 UIView가 뜨도록 한다. -  이미지를 뜨게 할 수 있다.
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int,forComponent component: Int, reusing view: UIView?) -> UIView {
+        let imageView = UIImageView(image: imageArray[row])
+        imageView.frame = CGRect(x: 0, y : 0, width: 150, height: 100)
         
+        return imageView
     }
 }
