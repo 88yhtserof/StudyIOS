@@ -67,5 +67,30 @@ class AlertViewController: UIViewController{
     
     
     @IBAction func btnLampRemove(_ sender: UIButton) {
+        let lampRemoveAlert = UIAlertController(title: "램프제거", message: "램프를 제거하시겠습니까?", preferredStyle: UIAlertController.Style.alert)
+        
+        //handler 매개변수를 삭제하고 뒤쪽에 {}사용해 익명함수를 구현할 수도 있다.
+        let offAction = UIAlertAction(title: "아니오, 끕니다.", style: UIAlertAction.Style.default){
+            ACTION in
+            self.imageView.image = self.imgOff
+            self.isLampOn = false
+        }
+        
+        let onAction = UIAlertAction(title: "아니오, 켭니다.", style: UIAlertAction.Style.default){
+            ACTION in
+            self.imageView.image = self.imgOn
+            self.isLampOn = true
+        }
+        
+        let removeAction = UIAlertAction(title: "네", style: UIAlertAction.Style.default){
+            ACTION in
+            self.imageView.image = self.imgRemove
+            self.isLampOn = false
+        }
+        
+        lampRemoveAlert.addAction(offAction)
+        lampRemoveAlert.addAction(onAction)
+        lampRemoveAlert.addAction(removeAction)
+        present(lampRemoveAlert, animated: true, completion: nil)
     }
 }
