@@ -406,24 +406,36 @@
                                 <rect key="frame" x="23" y="387" width="35" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="악기"/>
+                                <state key="normal" title="켜기"/>
+                                <connections>
+                                    <action selector="btnLampOn:" destination="t03-bR-Hb9" eventType="touchUpInside" id="RDV-jv-KNI"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5uS-mi-caK">
-                                <rect key="frame" x="165" y="386" width="70" height="36"/>
+                                <rect key="frame" x="183" y="386" width="35" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="어깨동무"/>
+                                <state key="normal" title="끄기"/>
+                                <connections>
+                                    <action selector="btnLampOff:" destination="t03-bR-Hb9" eventType="touchUpInside" id="bMA-Fo-7Ke"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6BB-qp-XOj">
-                                <rect key="frame" x="329" y="385" width="52" height="36"/>
+                                <rect key="frame" x="338" y="385" width="35" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="더보기"/>
+                                <state key="normal" title="제거"/>
+                                <connections>
+                                    <action selector="btnLampRemove:" destination="t03-bR-Hb9" eventType="touchUpInside" id="5wb-Iv-esx"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TCX-kv-rnq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="wU4-EI-R8W" id="H19-Hn-qRG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V6d-RA-7eV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

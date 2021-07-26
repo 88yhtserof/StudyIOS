@@ -27,6 +27,7 @@
 		9AA2FEF4268C61A300E2E9C7 /* StudyIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA2FEF3268C61A300E2E9C7 /* StudyIOSTests.swift */; };
 		9AA2FEFF268C61A300E2E9C7 /* StudyIOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA2FEFE268C61A300E2E9C7 /* StudyIOSUITests.swift */; };
 		9AF6E58826AEF61400AE6300 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF6E58726AEF61400AE6300 /* AlertViewController.swift */; };
+		9AF6E58C26AF092B00AE6300 /* imgBlack.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9AF6E58B26AF092B00AE6300 /* imgBlack.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		9AA2FEFE268C61A300E2E9C7 /* StudyIOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyIOSUITests.swift; sourceTree = "<group>"; };
 		9AA2FF00268C61A300E2E9C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9AF6E58726AEF61400AE6300 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		9AF6E58B26AF092B00AE6300 /* imgBlack.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = imgBlack.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		9A7CD86326A46D0800AA7748 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				9AF6E58B26AF092B00AE6300 /* imgBlack.jpg */,
 				9A06954F2696EBBA009F553F /* imgOn.jpg */,
 				9A0695502696EBBA009F553F /* imgOff.jpg */,
 				9A6E0B6C2699B61D009DF73A /* WallaceAndGromit_putArmsAround.jpg */,
@@ -282,6 +285,7 @@
 				9A6E0B6E2699B61D009DF73A /* WallaceAndGromit_playingMusic.jpg in Resources */,
 				9A0695512696EBBA009F553F /* imgOn.jpg in Resources */,
 				9AA2FEE4268C61A200E2E9C7 /* Main.storyboard in Resources */,
+				9AF6E58C26AF092B00AE6300 /* imgBlack.jpg in Resources */,
 				9A6E0B712699B61D009DF73A /* WallaceAndGromit_putArmsAround.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
