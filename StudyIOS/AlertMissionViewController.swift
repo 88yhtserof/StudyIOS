@@ -13,7 +13,7 @@ class AlertMissionViewController: UIViewController {
     
     let timeSelector: Selector = #selector(AlertMissionViewController.updateTime)//타이머가 구동되면 호출할 함수 지정
     let interval:Double = 1.0 //현재시간이 갱신될 간격
-    var alamTime:String = String()
+    var alarmTime:String = String()
     var alarmFlag:Bool = false //알람 여부
     
     @IBOutlet var lblCurrentTime: UILabel!
@@ -35,7 +35,7 @@ class AlertMissionViewController: UIViewController {
         formatter.dateFormat = "yyyy년MM월dd일 a hh시mm분"
         
         lblSelectTime.text = formatter.string(from: selectDate)
-        alamTime = formatter.string(from: selectDate)
+        alarmTime = formatter.string(from: selectDate)
     }
     
     @objc func updateTime(){
@@ -49,14 +49,18 @@ class AlertMissionViewController: UIViewController {
         formatter.dateFormat = "yyyy년MM월dd일 a hh시mm분"
         currentTime = formatter.string(from: date as Date)
         
-        if alamTime == currentTime {
+        if alarmTime == currentTime {
             if !alarmFlag { //알람이 아직 울리지 않았다면
-                let alamAlert = UIAlertController(title: "알림", message: "설정된 시간입니다.", preferredStyle: UIAlertController.Style.alert)
+                let alarmAlert = UIAlertController(title: "알림",
+                                                  message: "설정된 시간입니다.",
+                                                  preferredStyle: UIAlertController.Style.alert)
                 
-                let alamAction = UIAlertAction(title: "확인", style: UIAlertAction.Style.default, handler: nil)
+                let alarmAction = UIAlertAction(title: "확인",
+                                               style: UIAlertAction.Style.default,
+                                               handler: nil)
                 
-                alamAlert.addAction(alamAction)
-                present(alamAlert, animated: true, completion: nil)
+                alarmAlert.addAction(alarmAction)
+                present(alarmAlert, animated: true, completion: nil)
                 
                 alarmFlag = true
             }
@@ -65,5 +69,6 @@ class AlertMissionViewController: UIViewController {
             alarmFlag = false
         }
         //현재 시간이 선택한 시간과 다르다는 건 1분이 지났다는 의미 - 1분 동안 알림 창이 나타나지 않게 할 수 있다
+        //알람 시간이 아닐 때 알람 여부를 초기화해야 한다.
     }
 }
