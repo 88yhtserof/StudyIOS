@@ -25,7 +25,14 @@ class AlertMissionViewController: UIViewController {
         Timer.scheduledTimer(timeInterval: interval, target: self, selector: timeSelector, userInfo: nil, repeats: true)
     }
     
+    //데이트피커뷰가 동작할 때 호출되는 액션함수
     @IBAction func changeDatePicker(_ sender: UIDatePicker) {
+        let selectDate = sender.date
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy년MM월dd일 a hh시mm분"
+        
+        lblSelectTime.text = formatter.string(from: selectDate)
     }
     
     @objc func updateTime(){
