@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9A00593126B557660000321E /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A00593026B557660000321E /* WebViewController.swift */; };
+		9A00593326B5987D0000321E /* htmlView.html in Resources */ = {isa = PBXBuildFile; fileRef = 9A00593226B5987D0000321E /* htmlView.html */; };
 		9A06954C2696D3F3009F553F /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A06954B2696D3F3009F553F /* ImageViewController.swift */; };
 		9A0695512696EBBA009F553F /* imgOn.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9A06954F2696EBBA009F553F /* imgOn.jpg */; };
 		9A0695522696EBBA009F553F /* imgOff.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9A0695502696EBBA009F553F /* imgOff.jpg */; };
@@ -51,6 +52,7 @@
 
 /* Begin PBXFileReference section */
 		9A00593026B557660000321E /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		9A00593226B5987D0000321E /* htmlView.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = htmlView.html; sourceTree = "<group>"; };
 		9A06954B2696D3F3009F553F /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		9A06954F2696EBBA009F553F /* imgOn.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = imgOn.jpg; sourceTree = "<group>"; };
 		9A0695502696EBBA009F553F /* imgOff.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = imgOff.jpg; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 		9AA2FEDB268C61A200E2E9C7 /* StudyIOS */ = {
 			isa = PBXGroup;
 			children = (
+				9A00593226B5987D0000321E /* htmlView.html */,
 				9A7CD86326A46D0800AA7748 /* images */,
 				9A6E0B742699B763009DF73A /* MissionImageViewController.swift */,
 				9AA2FEDC268C61A200E2E9C7 /* AppDelegate.swift */,
@@ -286,6 +289,7 @@
 			files = (
 				9A6E0B6F2699B61D009DF73A /* WallaceAndGromit_face.png in Resources */,
 				9AA2FEE9268C61A300E2E9C7 /* LaunchScreen.storyboard in Resources */,
+				9A00593326B5987D0000321E /* htmlView.html in Resources */,
 				9A0695522696EBBA009F553F /* imgOff.jpg in Resources */,
 				9AA2FEE6268C61A300E2E9C7 /* Assets.xcassets in Resources */,
 				9A6E0B6E2699B61D009DF73A /* WallaceAndGromit_playingMusic.jpg in Resources */,

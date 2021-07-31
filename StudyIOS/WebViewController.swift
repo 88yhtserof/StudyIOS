@@ -55,26 +55,41 @@ class WebViewController: UIViewController,WKNavigationDelegate {
     }
     
     @IBAction func btnGoSite1(_ sender: UIButton) {
+        loadWebPage("https://github.com/88yhtserof")
     }
  
     @IBAction func btnGoSite2(_ sender: UIButton) {
+        loadWebPage("https://www.naver.com")
     }
     
     @IBAction func btnLoadHtmlString(_ sender: UIButton) {
+        let htmlString = "<h1>안녕하세요?</h1><p>HTML 테스트 중</p><p>나의 블로그 <a href=\"https://88yhtserof.tistory.com\">88yhtserof</a>로 이동</p>"
+        //줄을 바뀌 입력하면 에러가 발생한다. 줄 바꿈 없이 사용해야 한다.
+        
+        myWebView.loadHTMLString(htmlString, baseURL:nil)
     }
     
     @IBAction func btnLoadHtmlFile(_ sender: UIButton) {
+        let filePath = Bundle.main.path(forResource: "htmlView", ofType: "html")
+        let myUrl = URL(fileURLWithPath: filePath!)
+        let myRequest = URLRequest(url: myUrl)
+        
+        myWebView.load(myRequest)
     }
     
     @IBAction func btnStop(_ sender: UIBarButtonItem) {
+        myWebView.stopLoading() //웹 페이지 로딩 중지
     }
     
     @IBAction func btnReload(_ sender: UIBarButtonItem) {
+        myWebView.reload() //웹 페이지 재로딩
     }
     
     @IBAction func btnGoBack(_ sender: UIBarButtonItem) {
+        myWebView.goBack() //이전 웹 페이지로 이동
     }
     
     @IBAction func btnGoForward(_ sender: UIBarButtonItem) {
+        myWebView.goForward() //다음 웹 페이지로 이동
     }
 }
