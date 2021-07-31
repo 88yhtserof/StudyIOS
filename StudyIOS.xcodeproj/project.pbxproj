@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A00593126B557660000321E /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A00593026B557660000321E /* WebViewController.swift */; };
 		9A06954C2696D3F3009F553F /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A06954B2696D3F3009F553F /* ImageViewController.swift */; };
 		9A0695512696EBBA009F553F /* imgOn.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9A06954F2696EBBA009F553F /* imgOn.jpg */; };
 		9A0695522696EBBA009F553F /* imgOff.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9A0695502696EBBA009F553F /* imgOff.jpg */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9A00593026B557660000321E /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		9A06954B2696D3F3009F553F /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		9A06954F2696EBBA009F553F /* imgOn.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = imgOn.jpg; sourceTree = "<group>"; };
 		9A0695502696EBBA009F553F /* imgOff.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = imgOff.jpg; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				9A3AC81426A82B9400695958 /* PickerViewMissionController.swift */,
 				9AF6E58726AEF61400AE6300 /* AlertViewController.swift */,
 				9A552FBE26AFDE730030E84F /* AlertMissionViewController.swift */,
+				9A00593026B557660000321E /* WebViewController.swift */,
 			);
 			path = StudyIOS;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				9A7CD86226A46CC800AA7748 /* PickerViewController.swift in Sources */,
 				9AA2FEDD268C61A200E2E9C7 /* AppDelegate.swift in Sources */,
 				9A537C26269BFACD0068C96A /* DatePickerViewController.swift in Sources */,
+				9A00593126B557660000321E /* WebViewController.swift in Sources */,
 				9A06954C2696D3F3009F553F /* ImageViewController.swift in Sources */,
 				9AA2FEDF268C61A200E2E9C7 /* SceneDelegate.swift in Sources */,
 				9A6E0B752699B763009DF73A /* MissionImageViewController.swift in Sources */,
