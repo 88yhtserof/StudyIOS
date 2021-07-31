@@ -516,26 +516,41 @@
                                 <rect key="frame" x="336" y="57" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Go"/>
+                                <connections>
+                                    <action selector="btnGotoUrl:" destination="yv9-oF-beF" eventType="touchUpInside" id="pde-bF-mPM"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4V-Dm-IMZ">
                                 <rect key="frame" x="23" y="97" width="33" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Site1"/>
+                                <connections>
+                                    <action selector="btnGoSite1:" destination="yv9-oF-beF" eventType="touchUpInside" id="Ved-k3-Rhg"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kak-64-Guc">
                                 <rect key="frame" x="336" y="97" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="File"/>
+                                <connections>
+                                    <action selector="btnLoadHtmlFile:" destination="yv9-oF-beF" eventType="touchUpInside" id="WAR-6T-Jy4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ARc-60-Zis">
                                 <rect key="frame" x="126" y="97" width="36" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Site2"/>
+                                <connections>
+                                    <action selector="btnGoSite2:" destination="yv9-oF-beF" eventType="touchUpInside" id="RCr-Ew-y9S"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="InG-sH-350">
                                 <rect key="frame" x="231" y="97" width="42" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="HTML"/>
+                                <connections>
+                                    <action selector="btnLoadHtmlString:" destination="yv9-oF-beF" eventType="touchUpInside" id="91b-2a-jU4"/>
+                                </connections>
                             </button>
                             <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7rU-4t-5mS">
                                 <rect key="frame" x="23" y="135" width="343" height="618"/>
@@ -551,13 +566,29 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="i5R-7J-hYZ"/>
-                                    <barButtonItem systemItem="stop" id="lM1-eR-zaY"/>
+                                    <barButtonItem systemItem="stop" id="lM1-eR-zaY">
+                                        <connections>
+                                            <action selector="btnStop:" destination="yv9-oF-beF" id="lCU-QW-pkr"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="IKm-Sj-icE"/>
-                                    <barButtonItem systemItem="refresh" id="kUQ-if-zsf"/>
+                                    <barButtonItem systemItem="refresh" id="kUQ-if-zsf">
+                                        <connections>
+                                            <action selector="btnReload:" destination="yv9-oF-beF" id="goL-KJ-FYh"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="1Db-ac-IFB"/>
-                                    <barButtonItem systemItem="rewind" id="xGp-PC-rmV"/>
+                                    <barButtonItem systemItem="rewind" id="xGp-PC-rmV">
+                                        <connections>
+                                            <action selector="btnGoBack:" destination="yv9-oF-beF" id="z3G-Eb-lA5"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="a5W-Qi-Wyb"/>
-                                    <barButtonItem systemItem="fastForward" id="eTJ-c3-xxA"/>
+                                    <barButtonItem systemItem="fastForward" id="eTJ-c3-xxA">
+                                        <connections>
+                                            <action selector="btnGoForward:" destination="yv9-oF-beF" id="dUd-cw-xPO"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="aya-HR-pPc"/>
                                 </items>
                             </toolbar>
@@ -569,6 +600,11 @@
                         <viewLayoutGuide key="safeArea" id="JBo-xT-bhM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="myActivityIndicator" destination="8kS-WV-LJU" id="i1Q-27-bZG"/>
+                        <outlet property="myWebView" destination="8kS-WV-LJU" id="WPg-d7-1Wb"/>
+                        <outlet property="txtUrl" destination="L7N-iV-gKd" id="SHm-Hk-c8j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Imw-tn-ECN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
