@@ -51,7 +51,20 @@ class WebViewController: UIViewController,WKNavigationDelegate {
         myActivityIndicator.isHidden = true
     }
     
+    func checkUrl(_ url:String) -> String {
+        var strUrl = url
+        let flag = strUrl.hasPrefix("https://") //접두어로 "http://"을 가지고 있는 지 Bool 값으로 확인
+        
+        if !flag { //접두어를 안 가지고 있으면 붙여주기
+            strUrl = "https://" + strUrl
+        }
+         return strUrl
+    }
+    
     @IBAction func btnGotoUrl(_ sender: UIButton) {
+        let myUrl = checkUrl(txtUrl.text!) //"http://"가 접두어로 있는지 먼저 확인
+        txtUrl.text = ""
+        loadWebPage(myUrl) //확인 후 웹 페이지 로드
     }
     
     @IBAction func btnGoSite1(_ sender: UIButton) {
