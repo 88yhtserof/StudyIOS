@@ -7,7 +7,7 @@
 import UIKit
 import WebKit
 
-class WebViewController: UIViewController {
+class WebViewController: UIViewController,WKNavigationDelegate {
     @IBOutlet var txtUrl: UITextField!
     @IBOutlet var myWebView: WKWebView!
     @IBOutlet var myActivityIndicator: UIActivityIndicatorView!
@@ -23,8 +23,32 @@ class WebViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //웹 뷰가 로딩 중인지 살펴보기 위해 델리게이트 선언
+        myWebView.navigationDelegate = self
+        
         //앱 시작 시 지정한 웹 페이지가 나타나도록 설정
         loadWebPage("https://88yhtserof.tistory.com")
+    }
+    
+    //로딩 중인지 확인하기 위한 델리게이트 메서드
+    //myWebView가 로딩 중일 때 인디케이터를 실행하고 화면에 나타나게 한다.
+    func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
+        myActivityIndicator.startAnimating()
+        myActivityIndicator.isHidden = false
+    }
+    
+    //로딩이 완료되었을 때 동작하는 델리게이트 메서드
+    //인디케이터를 중지하고 숨긴다.
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        myActivityIndicator.stopAnimating()
+        myActivityIndicator.isHidden = true
+    }
+    
+    //로딩 실패 시 동작
+    //인디케이터를 중지하고 숨긴다.
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        myActivityIndicator.stopAnimating()
+        myActivityIndicator.isHidden = true
     }
     
     @IBAction func btnGotoUrl(_ sender: UIButton) {
