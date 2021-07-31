@@ -12,9 +12,21 @@ class WebViewController: UIViewController {
     @IBOutlet var myWebView: WKWebView!
     @IBOutlet var myActivityIndicator: UIActivityIndicatorView!
     
+    //웹 페이지를 로드하는 함수
+    func loadWebPage(_ url: String) {
+        let myUrl = URL(string: url) //utl 값을 받아 URL형으로 선언
+        let myRequest = URLRequest(url: myUrl!) //URLRequest형으로 선언
+        myWebView.load(myRequest)
+    }
+    
+    //뷰 생성 시 호출되는 함수
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //앱 시작 시 지정한 웹 페이지가 나타나도록 설정
+        loadWebPage("https://88yhtserof.tistory.com")
     }
+    
     @IBAction func btnGotoUrl(_ sender: UIButton) {
     }
     

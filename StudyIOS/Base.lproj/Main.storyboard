@@ -601,8 +601,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="myActivityIndicator" destination="8kS-WV-LJU" id="i1Q-27-bZG"/>
-                        <outlet property="myWebView" destination="8kS-WV-LJU" id="WPg-d7-1Wb"/>
+                        <outlet property="myActivityIndicator" destination="8kS-WV-LJU" id="Ksq-RV-hok"/>
+                        <outlet property="myWebView" destination="7rU-4t-5mS" id="cK4-fm-Xbn"/>
                         <outlet property="txtUrl" destination="L7N-iV-gKd" id="SHm-Hk-c8j"/>
                     </connections>
                 </viewController>
