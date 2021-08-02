@@ -14,6 +14,7 @@
 		9A0695522696EBBA009F553F /* imgOff.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9A0695502696EBBA009F553F /* imgOff.jpg */; };
 		9A2C9649269E8A5E007739CA /* MissionDatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2C9648269E8A5E007739CA /* MissionDatePickerViewController.swift */; };
 		9A3AC81526A82B9400695958 /* PickerViewMissionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3AC81426A82B9400695958 /* PickerViewMissionController.swift */; };
+		9A45322B26B7B59300D50FB6 /* WebMissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A45322A26B7B59300D50FB6 /* WebMissionViewController.swift */; };
 		9A537C26269BFACD0068C96A /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A537C25269BFACD0068C96A /* DatePickerViewController.swift */; };
 		9A552FBF26AFDE730030E84F /* AlertMissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A552FBE26AFDE730030E84F /* AlertMissionViewController.swift */; };
 		9A6E0B6E2699B61D009DF73A /* WallaceAndGromit_playingMusic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9A6E0B692699B61D009DF73A /* WallaceAndGromit_playingMusic.jpg */; };
@@ -58,6 +59,7 @@
 		9A0695502696EBBA009F553F /* imgOff.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = imgOff.jpg; sourceTree = "<group>"; };
 		9A2C9648269E8A5E007739CA /* MissionDatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionDatePickerViewController.swift; sourceTree = "<group>"; };
 		9A3AC81426A82B9400695958 /* PickerViewMissionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewMissionController.swift; sourceTree = "<group>"; };
+		9A45322A26B7B59300D50FB6 /* WebMissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebMissionViewController.swift; sourceTree = "<group>"; };
 		9A537C25269BFACD0068C96A /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 		9A552FBE26AFDE730030E84F /* AlertMissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMissionViewController.swift; sourceTree = "<group>"; };
 		9A6E0B692699B61D009DF73A /* WallaceAndGromit_playingMusic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WallaceAndGromit_playingMusic.jpg; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				9AF6E58726AEF61400AE6300 /* AlertViewController.swift */,
 				9A552FBE26AFDE730030E84F /* AlertMissionViewController.swift */,
 				9A00593026B557660000321E /* WebViewController.swift */,
+				9A45322A26B7B59300D50FB6 /* WebMissionViewController.swift */,
 			);
 			path = StudyIOS;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				9AF6E58826AEF61400AE6300 /* AlertViewController.swift in Sources */,
 				9A7CD86226A46CC800AA7748 /* PickerViewController.swift in Sources */,
 				9AA2FEDD268C61A200E2E9C7 /* AppDelegate.swift in Sources */,
+				9A45322B26B7B59300D50FB6 /* WebMissionViewController.swift in Sources */,
 				9A537C26269BFACD0068C96A /* DatePickerViewController.swift in Sources */,
 				9A00593126B557660000321E /* WebViewController.swift in Sources */,
 				9A06954C2696D3F3009F553F /* ImageViewController.swift in Sources */,

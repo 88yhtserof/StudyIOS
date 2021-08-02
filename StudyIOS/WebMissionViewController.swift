@@ -1,0 +1,51 @@
+/*
+ 문제: 웹 앱 만들기
+ HTML 파일을 읽어 디스플레이라고 링크를 걸어 블로그로 이동하게 만들어 보라
+ 
+ 구현 순서
+ 1. 레이아웃 배치 - 웹 뷰, 툴바, 툴바 버튼, 텍스트 필드, url 입력 버튼, 액티비티 인디케이터
+ 2. 아울렛 변수 및 액션 함수 생성
+ 3. 앱 시작 화면 초기화 - HTML 파일로 웹 페이지 생성
+ 4. 툴바 버튼 기능 구현
+ 5. url 입력 기능 구현
+ */
+import UIKit
+import WebKit
+
+class WebMissionViewController: UIViewController {
+    @IBOutlet var txtUrl: UITextField! //텍스트 필드에 적힌 text 속정을 제어해야 하므로 아울렛 변수 추가
+    @IBOutlet var myWebView: WKWebView! //웹 뷰의 내용, 즉 속성을 제어해야하므로 아울렛 변수 추가
+    @IBOutlet var MyActivityIndicator: UIActivityIndicatorView!//인티케이터 hide 속성을 제어해야 하므로 아울렛 변수 추가
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        //초기 화면 설정
+        let filePath = Bundle.main.path(forResource: "htmlView", ofType: "html")
+        let fileUrl = URL(fileURLWithPath: filePath!)
+        let fileRequest = URLRequest(url: fileUrl)
+        myWebView.load(fileRequest)
+    }
+    
+    //웹 뷰에 웹 페이지를 로드하기 위한 함수
+    func loadWebPage(_ url: String) {
+        let myUrl = URL(string: url)
+        let myRequest = URLRequest(url: myUrl!)
+        myWebView.load(myRequest)
+    }
+    
+    @IBAction func btnGotoUrl(_ sender: UIButton) {
+    }
+    
+    @IBAction func btnBarStop(_ sender: UIBarButtonItem) {
+    }
+    
+    @IBAction func btnBarReload(_ sender: UIBarButtonItem) {
+    }
+    
+    @IBAction func btnBarGoBack(_ sender: UIBarButtonItem) {
+    }
+    
+    @IBAction func btnBarGoForward(_ sender: UIBarButtonItem) {
+    }
+}
