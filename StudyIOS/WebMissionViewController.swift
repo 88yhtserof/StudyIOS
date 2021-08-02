@@ -34,7 +34,22 @@ class WebMissionViewController: UIViewController {
         myWebView.load(myRequest)
     }
     
+    //주소의 프로토콜 여부를 확인하는 함수
+    func checkUrl(_ url: String) -> String {
+        var strUrl:String = url
+        let flag = strUrl.hasPrefix("https://")
+        
+        if !flag {
+            strUrl = "https://" + strUrl
+        }
+        return strUrl
+    }
+    
     @IBAction func btnGotoUrl(_ sender: UIButton) {
+        let myUrl = checkUrl(txtUrl.text!)
+        txtUrl.text = ""
+        
+        loadWebPage(myUrl)
     }
     
     @IBAction func btnBarStop(_ sender: UIBarButtonItem) {
