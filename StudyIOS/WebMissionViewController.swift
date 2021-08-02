@@ -53,14 +53,18 @@ class WebMissionViewController: UIViewController {
     }
     
     @IBAction func btnBarStop(_ sender: UIBarButtonItem) {
+        myWebView.stopLoading()
     }
     
     @IBAction func btnBarReload(_ sender: UIBarButtonItem) {
+        myWebView.reload()
     }
     
     @IBAction func btnBarGoBack(_ sender: UIBarButtonItem) {
+        myWebView.goBack()
     }
     
     @IBAction func btnBarGoForward(_ sender: UIBarButtonItem) {
+        myWebView.goForward()
     }
 }
