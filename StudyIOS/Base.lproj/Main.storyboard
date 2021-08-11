@@ -710,10 +710,14 @@
                                 <rect key="frame" x="16" y="44" width="358" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="혅재위치"/>
+                                    <segment title="현재위치"/>
                                     <segment title="청량리역"/>
                                     <segment title="서울시청"/>
                                 </segments>
+                                <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="sgChangeLocation:" destination="k8H-gh-JhZ" eventType="valueChanged" id="jQ7-Tc-CFT"/>
+                                </connections>
                             </segmentedControl>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="rkK-7Y-H1b">
                                 <rect key="frame" x="16" y="83" width="358" height="666"/>
@@ -737,6 +741,11 @@
                         <viewLayoutGuide key="safeArea" id="Yk4-eF-0so"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="lblLocationInfo1" destination="DvG-N0-Twr" id="eAj-Gp-OY6"/>
+                        <outlet property="lblLocationInfo2" destination="0Md-NT-weL" id="6uf-7q-co8"/>
+                        <outlet property="myMap" destination="rkK-7Y-H1b" id="o5B-AC-uiB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YSj-kL-43H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
