@@ -1,6 +1,9 @@
 import UIKit
 import MapKit
 //MapKit은 지도를 확대, 축소, 및 이동하는 등 지도에 관한 여러 기능을 제공한다.
+/*
+ 시뮬레이터 메뉴에서 [Features/Location/Custom Location]을 선택하여 위도와 경도 값을 수정할 수 있다.
+ */
 
 class MapViewController: UIViewController, CLLocationManagerDelegate{
     @IBOutlet var myMap: MKMapView!
