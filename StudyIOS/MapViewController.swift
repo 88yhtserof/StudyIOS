@@ -28,17 +28,32 @@ class MapViewController: UIViewController, CLLocationManagerDelegate{
     
     //지도를 나타내기 위한 함수
     func goLocation(latitudeValue: CLLocationDegrees,
-                    longitudeValue: CLLocationDegrees, dleta span : Double){
+                    longitudeValue: CLLocationDegrees, dleta span : Double)
+    -> CLLocationCoordinate2D {
         let pLocation = CLLocationCoordinate2DMake(latitudeValue, longitudeValue)
         let spanValue = MKCoordinateSpan(latitudeDelta: span, longitudeDelta: span)
         let pRegion = MKCoordinateRegion(center: pLocation, span: spanValue)
         myMap.setRegion(pRegion, animated: true)
+        return pLocation
+    }
+    
+    //원하는 위도와 경도에 핀 설치하는 함수
+    func setAnnotation(latitudeValue: CLLocationDegrees,
+                       longitudeValue: CLLocationDegrees, delta span : Double, title strTitle: String, subtitle strSubtitle: String) {
+        //핀 설치를 위한 함수 호출
+        let annotaion = MKPointAnnotation()
+        annotaion.coordinate = goLocation(latitudeValue: latitudeValue,
+                                          longitudeValue: longitudeValue, dleta: span)
+        
+        annotaion.title = strTitle
+        annotaion.subtitle = strSubtitle
+        myMap.addAnnotation(annotaion)
     }
     
     //위치가 업데이트되었을 때 지도에 위치를 나타내기 위한 함수
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]){
         let pLocation = locations.last //위치가 업데이트되면 먼저 마지막 위치 값을 찾아낸다.
-        goLocation(latitudeValue: (pLocation?.coordinate.latitude)!, longitudeValue: (pLocation?.coordinate.longitude)!, dleta: 0.01)
+        _ = goLocation(latitudeValue: (pLocation?.coordinate.latitude)!, longitudeValue: (pLocation?.coordinate.longitude)!, dleta: 0.01)
         /*
          마지막 위치의 위도와 경도 값을 가지고 앞에서 만든 goLocation함수를 호출한다.
          이때 delta 값은 지도의 크기를 정하는데, 값이 작을 수록 확대되는 효과가 있다.
@@ -71,6 +86,24 @@ class MapViewController: UIViewController, CLLocationManagerDelegate{
         })
     }
     
+    //세그먼트 컨트롤을 선택했을 때 호출
     @IBAction func sgChangeLocation(_ sender: UISegmentedControl) {
+        //sender.selectedSegmentIndex 값은 현재 위치를 기점으로 하기 때문에 '현재 위치'의 인덱스는 0 그다음은 1,2 이다.
+        if sender.selectedSegmentIndex == 0 {
+            //현재 위치
+            self.lblLocationInfo1.text = ""
+            self.lblLocationInfo2.text = "현재 위치"
+            locationManager.startUpdatingLocation()
+        }
+        else if sender.selectedSegmentIndex == 1 {
+            setAnnotation(latitudeValue: 37.581448, longitudeValue: 127.048964, delta: 1, title: "청량리역", subtitle: "서울특별시 전농1동")
+            self.lblLocationInfo1.text = "서울특별시 전농1동"
+            self.lblLocationInfo2.text = "청량리역"
+        }
+        else if sender.selectedSegmentIndex == 2 {
+            setAnnotation(latitudeValue: 37.567893, longitudeValue: 126.978441, delta: 1, title: "서울 시청", subtitle: "서울특별시 중구 명동 30-3")
+            self.lblLocationInfo1.text = "서울특별시 중구 명동 30-3"
+            self.lblLocationInfo2.text = "서울 시청"
+        }
     }
 }
