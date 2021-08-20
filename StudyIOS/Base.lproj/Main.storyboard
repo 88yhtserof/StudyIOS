@@ -796,7 +796,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="qgi-YD-P91">
-                                <rect key="frame" x="135" y="435" width="121" height="27"/>
+                                <rect key="frame" x="-4" y="435" width="394" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="pageChange:" destination="GHu-QY-erv" eventType="valueChanged" id="bi1-Bc-uaK"/>
