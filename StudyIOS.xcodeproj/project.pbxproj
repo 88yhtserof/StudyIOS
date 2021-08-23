@@ -13,6 +13,7 @@
 		9A06954C2696D3F3009F553F /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A06954B2696D3F3009F553F /* ImageViewController.swift */; };
 		9A0695512696EBBA009F553F /* imgOn.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9A06954F2696EBBA009F553F /* imgOn.jpg */; };
 		9A0695522696EBBA009F553F /* imgOff.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9A0695502696EBBA009F553F /* imgOff.jpg */; };
+		9A1F1EB226D376D800D81525 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1F1EB126D376D800D81525 /* TabViewController.swift */; };
 		9A2C9649269E8A5E007739CA /* MissionDatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2C9648269E8A5E007739CA /* MissionDatePickerViewController.swift */; };
 		9A3AC81526A82B9400695958 /* PickerViewMissionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3AC81426A82B9400695958 /* PickerViewMissionController.swift */; };
 		9A45322B26B7B59300D50FB6 /* WebMissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A45322A26B7B59300D50FB6 /* WebMissionViewController.swift */; };
@@ -61,6 +62,7 @@
 		9A06954B2696D3F3009F553F /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		9A06954F2696EBBA009F553F /* imgOn.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = imgOn.jpg; sourceTree = "<group>"; };
 		9A0695502696EBBA009F553F /* imgOff.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = imgOff.jpg; sourceTree = "<group>"; };
+		9A1F1EB126D376D800D81525 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		9A2C9648269E8A5E007739CA /* MissionDatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionDatePickerViewController.swift; sourceTree = "<group>"; };
 		9A3AC81426A82B9400695958 /* PickerViewMissionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewMissionController.swift; sourceTree = "<group>"; };
 		9A45322A26B7B59300D50FB6 /* WebMissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebMissionViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 		9AA2FED0268C61A100E2E9C7 = {
 			isa = PBXGroup;
 			children = (
+				9A1F1EB126D376D800D81525 /* TabViewController.swift */,
 				9AA2FEDB268C61A200E2E9C7 /* StudyIOS */,
 				9AA2FEF2268C61A300E2E9C7 /* StudyIOSTests */,
 				9AA2FEFD268C61A300E2E9C7 /* StudyIOSUITests */,
@@ -345,6 +348,7 @@
 				9A00593126B557660000321E /* WebViewController.swift in Sources */,
 				9A06954C2696D3F3009F553F /* ImageViewController.swift in Sources */,
 				9AA2FEDF268C61A200E2E9C7 /* SceneDelegate.swift in Sources */,
+				9A1F1EB226D376D800D81525 /* TabViewController.swift in Sources */,
 				9A6E0B752699B763009DF73A /* MissionImageViewController.swift in Sources */,
 				9AE21CBA26CE420400CE9CF3 /* PageControlViewController.swift in Sources */,
 				9A552FBF26AFDE730030E84F /* AlertMissionViewController.swift in Sources */,
