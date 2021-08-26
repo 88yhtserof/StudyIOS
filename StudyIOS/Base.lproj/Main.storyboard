@@ -328,6 +328,7 @@
                         <viewLayoutGuide key="safeArea" id="8pN-ei-POg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="Nif-79-bFk"/>
                     <connections>
                         <outlet property="imageView" destination="2qh-wl-ULH" id="rjE-Va-8ky"/>
                         <outlet property="lblImageFileName" destination="aVc-da-aPn" id="sex-ep-7GK"/>
@@ -336,7 +337,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OOC-hc-nZx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-46.153846153846153" y="-3323.4597156398104"/>
+            <point key="canvasLocation" x="1868" y="-9466"/>
         </scene>
         <!--Picker View Mission Controller-->
         <scene sceneID="dHL-we-Nlh">
@@ -871,6 +872,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="aTQ-PO-cix" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QFr-fN-4Oq">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -878,6 +880,7 @@
                         <segue destination="ZN1-1A-w56" kind="relationship" relationship="viewControllers" id="CPx-98-G1k"/>
                         <segue destination="vJI-XP-vCm" kind="relationship" relationship="viewControllers" id="FIT-XE-9AQ"/>
                         <segue destination="ZNS-3J-bnR" kind="relationship" relationship="viewControllers" id="QOy-Zl-clG"/>
+                        <segue destination="BDK-TL-38t" kind="relationship" relationship="viewControllers" id="UFt-Vm-rVs"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="21X-lh-ED9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
