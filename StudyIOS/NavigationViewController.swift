@@ -6,8 +6,29 @@
  */
 import UIKit
 
-class NavigationViewController: UIViewController {
+class NavigationViewController: UIViewController,EditDelegate {
+    @IBOutlet var txMessage: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    //해당 세그웨이가 해당 뷰 컨트롤러로 전환되기 직전에 호출되는 함수이며 데이터 전달을 위해 사용한다.
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //세그웨이 도착 컨트롤러를 EditViewController 형태를 가지는 segue.destinationViewController로 선언한다.
+        let editViewController = segue.destination as! EditViewController
+        
+        //조건에 따라 다른 문자열을 전송하여 '수정화면'의 레이블이 서로 다르게 표시되도록 한다.
+        if segue.identifier == "editButton"{ //segue의 id가 "editButton"인가?
+            editViewController.textWayValue = "segue :  use button"
+        } else if segue.identifier == "editBarButton" {
+            editViewController.textWayValue = "segue : use Bar button"
+        }
+        editViewController.textMessage = txMessage.text!
+        editViewController.delegate = self
+    }
+    
+    func didMessageEditDone(_ controller: EditViewController, message: String) {
+        txMessage.text = message
     }
 }
