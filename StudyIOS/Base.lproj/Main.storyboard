@@ -894,14 +894,60 @@
                     <view key="view" contentMode="scaleToFill" id="4zB-Eo-V4M">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M5a-hD-BCP">
+                                <rect key="frame" x="344" y="107" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="수정"/>
+                                <connections>
+                                    <segue destination="s1K-je-xtS" kind="show" identifier="editButton" id="hQn-61-FnX"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="val-dd-7RH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="메인화면" id="MCs-aq-atc"/>
+                    <navigationItem key="navigationItem" title="메인화면" id="MCs-aq-atc">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="eSZ-td-uWl">
+                            <connections>
+                                <segue destination="s1K-je-xtS" kind="show" identifier="editBarButton" id="pjO-Jy-Xt6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VLY-jI-WHO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1836.9230769230769" y="-11374.407582938387"/>
+        </scene>
+        <!--수정화면-->
+        <scene sceneID="Niv-ON-NKJ">
+            <objects>
+                <viewController id="s1K-je-xtS" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="djZ-wU-yaD">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ySh-UR-g5n">
+                                <rect key="frame" x="16" y="114" width="268" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l4Y-6C-832">
+                                <rect key="frame" x="326" y="109" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="완료"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YYU-Ma-mZf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="수정화면" id="RqP-ly-18T"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XUq-yL-g6Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2660" y="-11374.407582938387"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="UB7-oL-EWy">
@@ -922,6 +968,9 @@
             <point key="canvasLocation" x="907.69230769230762" y="-11374.407582938387"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="hQn-61-FnX"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="WallaceAndGromit_playingMusic.jpg" width="700" height="394"/>
         <systemColor name="systemBackgroundColor">
