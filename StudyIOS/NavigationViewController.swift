@@ -7,12 +7,21 @@
 import UIKit
 
 class NavigationViewController: UIViewController,EditDelegate {
+    
+    let imgOn = UIImage(named: "imgOn.jpg")
+    let imgOff = UIImage(named: "imgOff.jpg")
+    var isOn: Bool = true
+    
     @IBOutlet var txMessage: UITextField!
+    @IBOutlet var imgView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        imgView.image = imgOn
     }
     
+    //세그웨이를 이용해 화면 전환
     //해당 세그웨이가 해당 뷰 컨트롤러로 전환되기 직전에 호출되는 함수이며 데이터 전달을 위해 사용한다.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //세그웨이 도착 컨트롤러를 EditViewController 형태를 가지는 segue.destinationViewController로 선언한다.
@@ -24,11 +33,26 @@ class NavigationViewController: UIViewController,EditDelegate {
         } else if segue.identifier == "editBarButton" {
             editViewController.textWayValue = "segue : use Bar button"
         }
+        
+        //수정화면으로 텍스트 메시지와 전구 상태 전달
         editViewController.textMessage = txMessage.text!
+        editViewController.isOn = isOn //'수정화면'의 isOn에 '메인화면'은 isOn 상태를 전달한다.
         editViewController.delegate = self
     }
     
+    //메시지 값을 텍스트 필드에 표시
     func didMessageEditDone(_ controller: EditViewController, message: String) {
         txMessage.text = message
+    }
+    
+    //전구 이미지 값 세팅
+    func didImageOnOffDone(_ controller: EditViewController, isOn: Bool) {
+        if isOn {
+            imgView.image = imgOn
+            self.isOn = true
+        }else {
+            imgView.image = imgOff
+            self.isOn = false
+        }
     }
 }
