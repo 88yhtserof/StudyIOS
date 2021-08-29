@@ -1042,6 +1042,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="imgView" destination="229-YX-8nj" id="IO5-lz-IA8"/>
+                        <outlet property="txMessage" destination="bx6-fW-cDF" id="3m7-Bb-XIN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b1o-hE-SrR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1119,6 +1123,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="완료"/>
+                                <connections>
+                                    <action selector="btnDone:" destination="O3w-bn-pFf" eventType="touchUpInside" id="K4s-R5-OHZ"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="확대" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8bb-a7-afa">
                                 <rect key="frame" x="146" y="246" width="44" height="30"/>
@@ -1136,6 +1143,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="수정화면" id="Vtv-bB-OcT"/>
+                    <connections>
+                        <outlet property="swIsOn" destination="z6R-0r-2a5" id="O4L-N3-OBX"/>
+                        <outlet property="txMessage" destination="reV-6H-3uc" id="95X-tv-O4u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c3q-0z-iBP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
