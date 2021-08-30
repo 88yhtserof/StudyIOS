@@ -11,12 +11,14 @@ protocol EditMissionDelegate {
     //EditViewController에서 함수를 호출하며 메시지를 전달해 주는데, 이 메시지의 문자열 값을 '메인화면'의 텍스트 필드에 텍스트로 보여준다.
     //즉, '수정화면'에서 '메인화면'으로 데이터 전달
     func didMessageEditDone(_ controller: EditMissionViewController, message: String)
+    func didImageZoomDone(_ controller: EditMissionViewController, isZoom: Bool)
 }
 
 class EditMissionViewController: UIViewController {
     
     var textMessage: String = ""  //'메인화면'에서 Text Fielf의 text를 직접 제어할 수 없으므로 변수를 생성해 '메인화면'에서 해당 변수를 제어할 수 있도록 한다.
     var delegate:EditMissionDelegate?
+    var isZoom: Bool = false //'메인화면'에서 '수정화면'의 switch를 직접 제어할 수 없으므로 변수를 생성해 '메인화면'에서 해당 변수를 제어할 수 있도록 한다.
     
     
     @IBOutlet var txMessage: UITextField!
@@ -27,12 +29,23 @@ class EditMissionViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         txMessage.text = textMessage//변수 message값은 txMessage의 text에 할당해 출력되도록 한다.
+        swIsOn.isOn = isZoom
     }
     
-
+    @IBAction func swImageZoom(_ sender: UISwitch) {
+        if sender.isOn {
+            isZoom = true
+        }else {
+            isZoom = false
+        }
+        
+    }
+    
     @IBAction func btnDone(_ sender: UIButton) {
+        //여기서 delegate는 '메인화면'을 의미
         if delegate != nil {
-            delegate!.didMessageEditDone(self, message: txMessage.text!)
+            delegate?.didMessageEditDone(self, message: txMessage.text!)
+            delegate?.didImageZoomDone(self, isZoom: isZoom)
         }
         
         _ = navigationController?.popViewController(animated: true)

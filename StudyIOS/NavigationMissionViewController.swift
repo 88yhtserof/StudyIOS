@@ -9,6 +9,13 @@ import UIKit
 
 class NavigationMissionViewController: UIViewController, EditMissionDelegate {
     
+    let scale: CGFloat = 2.0
+    var newWidth: CGFloat = 0.0
+    var newHeight: CGFloat = 0.0
+    var isZoom:Bool = true
+    
+    
+    
     @IBOutlet var txMessage: UITextField!
     @IBOutlet var imgView: UIImageView!
     
@@ -23,13 +30,28 @@ class NavigationMissionViewController: UIViewController, EditMissionDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let editMissionViewController = segue.destination as! EditMissionViewController //세그웨이의 도착 뷰 컨트롤러를 EditMissionViewController로 한다.
         editMissionViewController.textMessage = txMessage.text!
-        
+        editMissionViewController.isZoom = isZoom
         editMissionViewController.delegate = self
     }
     
     func didMessageEditDone(_ controller: EditMissionViewController, message: String) {
         txMessage.text = message
     }
+    
+    func didImageZoomDone(_ controller: EditMissionViewController, isZoom: Bool) {
+        //'메인화면'의 변수인 isZoom에 접달인자 isZoom을 할당
+        if isZoom {
+            newWidth = imgView.frame.width*scale
+            newHeight = imgView.frame.height*scale
+            self.isZoom = true
+        }else {
+            newWidth = imgView.frame.width/scale
+            newHeight = imgView.frame.height/scale
+            self.isZoom = false
+        }
+        imgView.frame.size = CGSize(width: newWidth, height: newHeight)
+    }
+    
     /*
     // MARK: - Navigation
 
