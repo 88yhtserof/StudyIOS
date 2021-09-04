@@ -7,6 +7,13 @@
 
 import UIKit
 
+var items: Array<String> = ["책 구매", "철수와의 약속", "스터디 준비하기"]
+var itemsImageFile: Array<String> = ["WallaceAndGromit_putArmsAround.jpg",
+                                     "WallaceAndGromit_playingMusic.jpg",
+                                     "WallaceAndGromit_face.png"]
+
+
+
 class TableViewController: UITableViewController {
 
     @IBOutlet var tvListView: UITableView!
@@ -25,23 +32,28 @@ class TableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        //보통 테이블 안에 섹션이 한 개 이므로 numberOfSections의 리턴 값을 1로 한다.
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        //Row 행, 섹션 당 행의 개수는 items의 개수이므로 numberOfRowsInSection 매개변수를 갖는 tableView 함수의 반환값을 items.count로 한다.
+        return items.count
     }
 
-    /*
+    //셀에 데이터를 적용하는 함수
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
+        
+        //셀의 텍스트 레이블에 원하는 데이터 대입
+        cell.textLabel?.text = items[(indexPath as NSIndexPath).row]
+        cell.imageView?.image = UIImage(named: itemsImageFile[(indexPath as NSIndexPath).row])
 
         // Configure the cell...
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
