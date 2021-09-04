@@ -19,6 +19,9 @@
 		9A45322B26B7B59300D50FB6 /* WebMissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A45322A26B7B59300D50FB6 /* WebMissionViewController.swift */; };
 		9A537C26269BFACD0068C96A /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A537C25269BFACD0068C96A /* DatePickerViewController.swift */; };
 		9A552FBF26AFDE730030E84F /* AlertMissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A552FBE26AFDE730030E84F /* AlertMissionViewController.swift */; };
+		9A69E66526E3921900C17A46 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A69E66426E3921900C17A46 /* TableViewController.swift */; };
+		9A69E66726E3926600C17A46 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A69E66626E3926600C17A46 /* AddViewController.swift */; };
+		9A69E66926E3927B00C17A46 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A69E66826E3927B00C17A46 /* DetailViewController.swift */; };
 		9A6E0B6E2699B61D009DF73A /* WallaceAndGromit_playingMusic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9A6E0B692699B61D009DF73A /* WallaceAndGromit_playingMusic.jpg */; };
 		9A6E0B6F2699B61D009DF73A /* WallaceAndGromit_face.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A6E0B6A2699B61D009DF73A /* WallaceAndGromit_face.png */; };
 		9A6E0B712699B61D009DF73A /* WallaceAndGromit_putArmsAround.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9A6E0B6C2699B61D009DF73A /* WallaceAndGromit_putArmsAround.jpg */; };
@@ -72,6 +75,9 @@
 		9A45322A26B7B59300D50FB6 /* WebMissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebMissionViewController.swift; sourceTree = "<group>"; };
 		9A537C25269BFACD0068C96A /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 		9A552FBE26AFDE730030E84F /* AlertMissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMissionViewController.swift; sourceTree = "<group>"; };
+		9A69E66426E3921900C17A46 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		9A69E66626E3926600C17A46 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		9A69E66826E3927B00C17A46 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		9A6E0B692699B61D009DF73A /* WallaceAndGromit_playingMusic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WallaceAndGromit_playingMusic.jpg; sourceTree = "<group>"; };
 		9A6E0B6A2699B61D009DF73A /* WallaceAndGromit_face.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WallaceAndGromit_face.png; sourceTree = "<group>"; };
 		9A6E0B6C2699B61D009DF73A /* WallaceAndGromit_putArmsAround.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WallaceAndGromit_putArmsAround.jpg; sourceTree = "<group>"; };
@@ -189,6 +195,9 @@
 				9AE692CA26DA24FF0056C0F6 /* NavigationViewController.swift */,
 				9A80038D26DB586500D0A99A /* NavigationMissionViewController.swift */,
 				9A80038F26DB91DA00D0A99A /* EditMissionViewController.swift */,
+				9A69E66426E3921900C17A46 /* TableViewController.swift */,
+				9A69E66626E3926600C17A46 /* AddViewController.swift */,
+				9A69E66826E3927B00C17A46 /* DetailViewController.swift */,
 			);
 			path = StudyIOS;
 			sourceTree = "<group>";
@@ -359,12 +368,15 @@
 				9A45322B26B7B59300D50FB6 /* WebMissionViewController.swift in Sources */,
 				9A537C26269BFACD0068C96A /* DatePickerViewController.swift in Sources */,
 				9A00593126B557660000321E /* WebViewController.swift in Sources */,
+				9A69E66726E3926600C17A46 /* AddViewController.swift in Sources */,
 				9A06954C2696D3F3009F553F /* ImageViewController.swift in Sources */,
 				9AA2FEDF268C61A200E2E9C7 /* SceneDelegate.swift in Sources */,
 				9AE692CB26DA24FF0056C0F6 /* NavigationViewController.swift in Sources */,
+				9A69E66926E3927B00C17A46 /* DetailViewController.swift in Sources */,
 				9A1F1EB226D376D800D81525 /* TabViewController.swift in Sources */,
 				9A80039026DB91DA00D0A99A /* EditMissionViewController.swift in Sources */,
 				9A6E0B752699B763009DF73A /* MissionImageViewController.swift in Sources */,
+				9A69E66526E3921900C17A46 /* TableViewController.swift in Sources */,
 				9AE21CBA26CE420400CE9CF3 /* PageControlViewController.swift in Sources */,
 				9A80038E26DB586500D0A99A /* NavigationMissionViewController.swift in Sources */,
 				9A552FBF26AFDE730030E84F /* AlertMissionViewController.swift in Sources */,
