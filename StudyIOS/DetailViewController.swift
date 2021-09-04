@@ -1,14 +1,9 @@
-//
-//  DetailViewController.swift
-//  StudyIOS
-//
-//  Created by 임윤휘 on 2021/09/04.
-//
-
 import UIKit
 
 class DetailViewController: UIViewController {
 
+    @IBOutlet var lblItem: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
