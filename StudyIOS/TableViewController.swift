@@ -81,12 +81,22 @@ class TableViewController: UITableViewController {
         return "삭제"
     }
     
-    /*
     // Override to support rearranging the table view.
+    //목록의 순서 재배치
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+        //이동할 아이템(from)의 위치를 변수에 저장
+        let itemToMove = items[(fromIndexPath as NSIndexPath).row]
+        let itemImageToMove = itemsImageFile[(fromIndexPath as NSIndexPath).row]
+        
+        //이동할 아이템(from)을 삭제한다.. 이때 삭제한 아이템 뒤의 아이템들의 인덱스가 재정렬된다.
+        items.remove(at: (fromIndexPath as NSIndexPath).row)
+        itemsImageFile.remove(at: (fromIndexPath as NSIndexPath).row)
+        
+        //삭제할 아이템(from)을 이동할 위치(to)로 삽입한다. 또한 삽입한 아이템 뒤의 아이템들의 인덱스가 재정렬된다.
+        items.insert(itemToMove, at: (to as NSIndexPath).row)
+        itemsImageFile.insert(itemImageToMove, at: (to as NSIndexPath).row)
+        
     }
-    */
 
     /*
     // Override to support conditional rearranging of the table view.
