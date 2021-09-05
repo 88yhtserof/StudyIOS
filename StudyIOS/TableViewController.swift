@@ -18,6 +18,18 @@ class TableViewController: UITableViewController {
 
     @IBOutlet var tvListView: UITableView!
     
+    /*
+     뷰가 보일 때 호출되는 함수들
+     뷰 생성 시 호출되는 함수
+     (1)viewDidLoad -> (2)viewWillAppear -> (2)viewDidAppear
+     뷰 전환 시 호출되는 함수
+     (2)viewWillAppear -> (3)viewDidAppear
+     
+     (1)viewDidLoad : 뷰가 로드되었을 때 호출되는 함수로, 뷰가 생성될 때 한 번만 호출된다.
+     (2)viewWillAppear : 뷰가 노출될 준비가 끝났을 때 호출되는 함수로, 뷰가 노출될 때마다 호출된다.
+     (3)viewDidAppear :  뷰가 완전히 보인 후 호출되는 함수.
+     */
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,6 +38,14 @@ class TableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         self.navigationItem.leftBarButtonItem = self.editButtonItem
+    }
+    
+    //뷰 전환될 때 호출되는 함수
+    //리스트가 추가되어 'Main View'로 돌아올 때 호출되며 추가된 내용을 리스트에 보여준다.
+    override func viewWillAppear(_ animated: Bool) {
+        //뷰가 노출될 때마다 리스트의 데이터를 다시 불러옴
+        //테이블 뷰의 행과 섹션을 다시 불러온다.
+        tvListView.reloadData()
     }
 
     // MARK: - Table view data source
@@ -105,15 +125,21 @@ class TableViewController: UITableViewController {
         return true
     }
     */
-
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
+    //해당 세그웨이가 해당 뷰 컨트롤러로 전환되기 직전에 호출되는 함수이며 데이터 전달을 위해 사용된다.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "sgDetail" {
+            let cell = sender as! UITableViewCell
+            let indexPath = self.tvListView.indexPath(for: cell)
+            let detailView = segue.destination as! DetailViewController
+            //DetailViewController에 있는 receiveItem 함수 호출
+            detailView.receiveItem(items[((indexPath! as NSIndexPath).row)])
+        }
     }
-    */
 
 }
