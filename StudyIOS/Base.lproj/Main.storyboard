@@ -1278,6 +1278,93 @@
             </objects>
             <point key="canvasLocation" x="908" y="-13018"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="273-6r-wne">
+            <objects>
+                <viewController id="2Yb-Dd-BJV" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d0N-0L-MRm">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgBlack.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="mfU-lw-KFR">
+                                <rect key="frame" x="16" y="44" width="358" height="780"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QKL-g1-ica"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QKL-g1-ica" firstAttribute="trailing" secondItem="mfU-lw-KFR" secondAttribute="trailing" constant="16" id="9O9-8W-VbK"/>
+                            <constraint firstItem="mfU-lw-KFR" firstAttribute="top" secondItem="d0N-0L-MRm" secondAttribute="top" constant="44" id="Vjl-Qz-mYp"/>
+                            <constraint firstItem="mfU-lw-KFR" firstAttribute="leading" secondItem="QKL-g1-ica" secondAttribute="leading" constant="16" id="ZQ1-yK-mdm"/>
+                            <constraint firstItem="mfU-lw-KFR" firstAttribute="bottom" secondItem="d0N-0L-MRm" secondAttribute="bottom" constant="-20" id="bwe-5L-I7R"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="udV-uO-Ibl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="907.69230769230762" y="-14345.260663507108"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="k62-Zb-yDz">
+            <objects>
+                <viewController id="TEF-3X-x0d" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Zh-X7-Ugn">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="91" translatesAutoresizingMaskIntoConstraints="NO" id="3eQ-JN-kMi">
+                                <rect key="frame" x="55" y="84" width="280" height="189"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="yBQ-zN-IlE">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="68"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z4g-DS-CTC">
+                                                <rect key="frame" x="82.666666666666657" y="0.0" width="115" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="sFb-R4-jJF"/>
+                                                </constraints>
+                                                <state key="normal" title="Auto Layout Test"/>
+                                            </button>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="zjd-OL-Cnw">
+                                                <rect key="frame" x="-2" y="38" width="284" height="31"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="280" id="DKu-LA-azv"/>
+                                                </constraints>
+                                            </slider>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="71" translatesAutoresizingMaskIntoConstraints="NO" id="8aa-Ad-LaV">
+                                        <rect key="frame" x="0.0" y="159" width="280" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d8z-cp-xhC">
+                                                <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="beo-p8-CYZ">
+                                                <rect key="frame" x="117" y="0.0" width="46" height="30"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W8m-mQ-zU0">
+                                                <rect key="frame" x="234" y="0.0" width="46" height="30"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="C7t-uk-UdS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3eQ-JN-kMi" firstAttribute="top" secondItem="C7t-uk-UdS" secondAttribute="top" constant="40" id="6Wu-22-d4C"/>
+                            <constraint firstItem="3eQ-JN-kMi" firstAttribute="centerX" secondItem="2Zh-X7-Ugn" secondAttribute="centerX" id="JKD-US-4m6"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9C7-sf-FwV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1836.9230769230769" y="-14345.260663507108"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="pjO-Jy-Xt6"/>
@@ -1285,6 +1372,7 @@
     <resources>
         <image name="WallaceAndGromit_face.png" width="699" height="416"/>
         <image name="WallaceAndGromit_playingMusic.jpg" width="700" height="394"/>
+        <image name="imgBlack.jpg" width="800" height="1422"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
