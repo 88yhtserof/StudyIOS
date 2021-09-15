@@ -38,6 +38,7 @@
 		9AA2FEF4268C61A300E2E9C7 /* StudyIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA2FEF3268C61A300E2E9C7 /* StudyIOSTests.swift */; };
 		9AA2FEFF268C61A300E2E9C7 /* StudyIOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA2FEFE268C61A300E2E9C7 /* StudyIOSUITests.swift */; };
 		9AD50AD626CF7ADE001FDF60 /* PageControlMissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD50AD526CF7ADE001FDF60 /* PageControlMissionViewController.swift */; };
+		9ADBB98026F23F1B0080B1D7 /* CameraPhotoLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADBB97F26F23F1B0080B1D7 /* CameraPhotoLibraryViewController.swift */; };
 		9AE21CBA26CE420400CE9CF3 /* PageControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE21CB926CE420300CE9CF3 /* PageControlViewController.swift */; };
 		9AE5901126DA5CC5002609EC /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE5901026DA5CC5002609EC /* EditViewController.swift */; };
 		9AE692CB26DA24FF0056C0F6 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE692CA26DA24FF0056C0F6 /* NavigationViewController.swift */; };
@@ -100,6 +101,7 @@
 		9AA2FEFE268C61A300E2E9C7 /* StudyIOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyIOSUITests.swift; sourceTree = "<group>"; };
 		9AA2FF00268C61A300E2E9C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9AD50AD526CF7ADE001FDF60 /* PageControlMissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControlMissionViewController.swift; sourceTree = "<group>"; };
+		9ADBB97F26F23F1B0080B1D7 /* CameraPhotoLibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPhotoLibraryViewController.swift; sourceTree = "<group>"; };
 		9AE21CB926CE420300CE9CF3 /* PageControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControlViewController.swift; sourceTree = "<group>"; };
 		9AE5901026DA5CC5002609EC /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		9AE692CA26DA24FF0056C0F6 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 				9A69E66426E3921900C17A46 /* TableViewController.swift */,
 				9A69E66626E3926600C17A46 /* AddViewController.swift */,
 				9A69E66826E3927B00C17A46 /* DetailViewController.swift */,
+				9ADBB97F26F23F1B0080B1D7 /* CameraPhotoLibraryViewController.swift */,
 			);
 			path = StudyIOS;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 				9A69E66726E3926600C17A46 /* AddViewController.swift in Sources */,
 				9A06954C2696D3F3009F553F /* ImageViewController.swift in Sources */,
 				9AA2FEDF268C61A200E2E9C7 /* SceneDelegate.swift in Sources */,
+				9ADBB98026F23F1B0080B1D7 /* CameraPhotoLibraryViewController.swift in Sources */,
 				9AE692CB26DA24FF0056C0F6 /* NavigationViewController.swift in Sources */,
 				9A69E66926E3927B00C17A46 /* DetailViewController.swift in Sources */,
 				9A1F1EB226D376D800D81525 /* TabViewController.swift in Sources */,
