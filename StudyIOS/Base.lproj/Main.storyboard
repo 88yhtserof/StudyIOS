@@ -1389,6 +1389,9 @@
                                                     <constraint firstAttribute="height" constant="40" id="KAY-UV-3fh"/>
                                                 </constraints>
                                                 <state key="normal" title="사진 촬영"/>
+                                                <connections>
+                                                    <action selector="btnCaptureImageFromCamera:" destination="rKP-vS-dc1" eventType="touchUpInside" id="9TC-i2-dPJ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u6E-BP-q62">
                                                 <rect key="frame" x="179" y="0.0" width="179" height="40"/>
@@ -1396,6 +1399,9 @@
                                                     <constraint firstAttribute="height" constant="40" id="TPi-3e-W3E"/>
                                                 </constraints>
                                                 <state key="normal" title="비디오 촬영"/>
+                                                <connections>
+                                                    <action selector="btnRecordVideoCamera:" destination="rKP-vS-dc1" eventType="touchUpInside" id="X8h-ph-ord"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -1408,6 +1414,9 @@
                                                     <constraint firstAttribute="height" constant="40" id="TPD-7J-2fl"/>
                                                 </constraints>
                                                 <state key="normal" title="사진 불러오기"/>
+                                                <connections>
+                                                    <action selector="btnLoadImageFromLibrary:" destination="rKP-vS-dc1" eventType="touchUpInside" id="bXU-yi-b5W"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUS-ZL-La4">
                                                 <rect key="frame" x="179" y="0.0" width="179" height="40"/>
@@ -1415,6 +1424,9 @@
                                                     <constraint firstAttribute="height" constant="40" id="AMR-5Z-9Mj"/>
                                                 </constraints>
                                                 <state key="normal" title="비디오 불러오기"/>
+                                                <connections>
+                                                    <action selector="btnLoadVideoFromLibrary:" destination="rKP-vS-dc1" eventType="touchUpInside" id="OKU-m7-Grj"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -1430,6 +1442,9 @@
                             <constraint firstItem="i4j-Pf-FDg" firstAttribute="top" secondItem="Yey-Ih-khA" secondAttribute="top" id="hZE-bg-qY6"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imgView" destination="JNl-5m-x7T" id="gO8-y2-PFV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ptA-Ws-cfh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
